@@ -4,17 +4,26 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import ListIndex from './components/form/ListIndex';
 import CounterIndex from './components/counter/CounterIndex';
+import { UserInfoContext } from './contexts/context';
+import { UserInfoType } from './types/UserInfoType';
 
 const App = () => {
+  const userInfoInitialData: UserInfoType = {
+    userId: 123456,
+    userName: 'hogehoge',
+  };
+
   return (
     <div>
-      <Routes>
-        <Route path='/' element={<Navigation />}>
-          <Route index element={<Home />} />
-          <Route path='/form' element={<ListIndex />} />
-          <Route path='/counter' element={<CounterIndex />} />
-        </Route>
-      </Routes>
+      <UserInfoContext.Provider value={userInfoInitialData}>
+        <Routes>
+          <Route path='/' element={<Navigation />}>
+            <Route index element={<Home />} />
+            <Route path='/form' element={<ListIndex />} />
+            <Route path='/counter' element={<CounterIndex />} />
+          </Route>
+        </Routes>
+      </UserInfoContext.Provider>
     </div>
   );
 }
