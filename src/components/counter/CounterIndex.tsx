@@ -4,9 +4,15 @@ import { CounterContext, CounterDispatchContext } from '../../contexts/context';
 import Counter from './Counter';
 import CurrentCounter from './CurrentCounter';
 
-const CounterIndex = () => {
-    // 初期値は0。
+/**
+ * CounterIndexコンポーネント
+ * 
+ * @returns {JSX.Element}
+ */
+const CounterIndex = (): JSX.Element => {
+    // 初期値は0
     const [counter, dispatch] = useReducer(reducer, 0);
+    
     return (
         <CounterContext.Provider value={counter}>
             <CounterDispatchContext.Provider value={dispatch}>

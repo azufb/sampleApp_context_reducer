@@ -10,6 +10,7 @@ import List from './List';
  * @returns {JSX.Element}
  */
 const ListIndex = (): JSX.Element => {
+    // 初期値は空配列
     const [list, dispatch] = useReducer(reducer, []);
 
     return (
