@@ -7,10 +7,21 @@ type FormInputDataType = {
     textInput: string;
 };
 
-const Form = () => {
+/**
+ * Formコンポーネント
+ * 
+ * @returns {JSX.Element}
+ */
+const Form = (): JSX.Element => {
     const { register, handleSubmit, reset } = useForm<FormInputDataType>();
     const dispatch: Dispatch<ActionType>  = useContext(ListDispatchContext);
 
+    /**
+     * タスク追加
+     * 
+     * @param {FormInputDataType} data 
+     * @returns {void}
+     */
     const handleSubmitText = (data: FormInputDataType): void => {
         console.log(data);
 
