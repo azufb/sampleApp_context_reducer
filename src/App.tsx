@@ -7,7 +7,13 @@ import CounterIndex from './components/counter/CounterIndex';
 import { UserInfoContext } from './contexts/context';
 import { UserInfoType } from './types/UserInfoType';
 
-const App = () => {
+/**
+ * Appコンポーネント
+ * 
+ * @returns {JSX.Element}
+ */
+const App = (): JSX.Element => {
+  // ユーザー情報(仮)
   const userInfoInitialData: UserInfoType = {
     userId: 123456,
     userName: 'hogehoge',
@@ -15,6 +21,7 @@ const App = () => {
 
   return (
     <div>
+      {/* ユーザー情報をどのコンポーネントでも利用できるよう、このコンポーネントでProviderに渡す */}
       <UserInfoContext.Provider value={userInfoInitialData}>
         <Routes>
           <Route path='/' element={<Navigation />}>
