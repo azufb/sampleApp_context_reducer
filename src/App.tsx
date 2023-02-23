@@ -23,6 +23,9 @@ const App = (): JSX.Element => {
     <div>
       {/* ユーザー情報をどのコンポーネントでも利用できるよう、このコンポーネントでProviderに渡す */}
       <UserInfoContext.Provider value={userInfoInitialData}>
+        <h1>Context/Reducerのサンプル実装</h1>
+
+        
         <Routes>
           <Route path='/' element={<Navigation />}>
             <Route index element={<Home />} />
