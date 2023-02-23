@@ -1,6 +1,7 @@
 import { Dispatch, useContext } from 'react';
 import { ListContext, ListDispatchContext } from '../../contexts/context';
 import { ActionType } from '../../types/ActionType';
+import { ListType } from '../../types/ListType';
 
 /**
  * Listコンポーネント
@@ -9,7 +10,7 @@ import { ActionType } from '../../types/ActionType';
  * @returns {JSX.Element}
  */
 const List = (): JSX.Element => {
-    const list: any[] = useContext(ListContext);
+    const list: ListType[] = useContext(ListContext);
     const dispatch: Dispatch<ActionType> = useContext(ListDispatchContext);
 
     /**
