@@ -1,7 +1,8 @@
 import { Dispatch, useContext } from 'react';
-import { ListContext, ListDispatchContext } from '../../contexts/context';
+import { ListContext, ListDispatchContext, UserInfoContext } from '../../contexts/context';
 import { ActionType } from '../../types/ActionType';
 import { ListType } from '../../types/ListType';
+import { UserInfoType } from '../../types/UserInfoType';
 
 /**
  * Listコンポーネント
@@ -12,6 +13,9 @@ import { ListType } from '../../types/ListType';
 const List = (): JSX.Element => {
     const list: ListType[] = useContext(ListContext);
     const dispatch: Dispatch<ActionType> = useContext(ListDispatchContext);
+
+    // ユーザー情報取得
+    const userInfo: UserInfoType = useContext(UserInfoContext);
 
     /**
      * タスク削除
@@ -31,6 +35,8 @@ const List = (): JSX.Element => {
     return (
         <div>
             <h2>Listコンポーネント</h2>
+
+            <p>ユーザー名：{userInfo.userName}</p>
 
             <table>
                 <thead>
