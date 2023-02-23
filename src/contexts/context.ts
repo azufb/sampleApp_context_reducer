@@ -5,6 +5,10 @@ const initialAction: ActionType = {
     type: ''
 };
 
+// ユーザー情報用Context
+// 色々なコンポーネントで使いたい
+export const UserInfoContext: any = createContext(null);
+
 // List用のContext
 // 急遽anyで逃げる
 export const ListContext: any = createContext([]);
