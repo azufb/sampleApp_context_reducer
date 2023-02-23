@@ -1,5 +1,6 @@
-import { useContext } from 'react';
+import { Dispatch, useContext } from 'react';
 import { CounterContext, CounterDispatchContext } from '../../contexts/context';
+import { ActionType } from '../../types/ActionType';
 
 /**
  * Counterコンポーネント
@@ -10,8 +11,7 @@ import { CounterContext, CounterDispatchContext } from '../../contexts/context';
 const Counter = (): JSX.Element => {
     // useContextで、stateを取得。
     const currentCount: number = useContext(CounterContext);
-    // 一旦anyで逃げた。
-    const dispatch: any = useContext(CounterDispatchContext);
+    const dispatch: Dispatch<ActionType> = useContext(CounterDispatchContext);
 
     /**
      * 加算
