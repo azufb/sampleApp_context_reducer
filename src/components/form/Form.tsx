@@ -1,4 +1,7 @@
+import { Dispatch, useContext } from 'react';
+import { ActionType } from '../../types/ActionType';
 import { useForm } from 'react-hook-form';
+import { ListDispatchContext } from '../../contexts/context';
 
 type FormInputDataType = {
     textInput: string;
@@ -6,9 +9,17 @@ type FormInputDataType = {
 
 const Form = () => {
     const { register, handleSubmit, reset } = useForm<FormInputDataType>();
+    const dispatch: Dispatch<ActionType>  = useContext(ListDispatchContext);
 
-    const handleSubmitText = (data: FormInputDataType) => {
+    const handleSubmitText = (data: FormInputDataType): void => {
         console.log(data);
+
+        dispatch({
+            type: 'addTask',
+            payload: {
+                title: data.textInput
+            }
+        });
 
         reset();
     };
@@ -18,9 +29,9 @@ const Form = () => {
             <h2>Formコンポーネント</h2>
 
             <form onSubmit={handleSubmit(handleSubmitText)}>
-                <label htmlFor='textInput'>テキスト：</label>
+                <label htmlFor='textInput'>タスク：</label>
                 <input id='textInput' {...register('textInput')} />
-                <button type='submit'>送信</button>
+                <button type='submit'>追加</button>
             </form>
         </div>
     );
