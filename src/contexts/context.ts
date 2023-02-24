@@ -2,7 +2,7 @@ import React, { createContext } from 'react';
 import { ActionType } from '../types/ActionType';
 
 const initialAction: ActionType = {
-    type: ''
+  type: '',
 };
 
 // ユーザー情報用Context
