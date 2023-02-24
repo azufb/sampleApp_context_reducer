@@ -3,6 +3,7 @@ import reducer from './reducer/reducer';
 import { ListContext, ListDispatchContext } from '../../contexts/context';
 import Form from './Form';
 import List from './List';
+import styles from '../../styles/form/listIndex.module.scss';
 
 /**
  * ListIndexコンポーネント
@@ -14,7 +15,7 @@ const ListIndex = (): JSX.Element => {
   const [list, dispatch] = useReducer(reducer, []);
 
   return (
-    <div>
+    <div className={styles.base}>
       <ListContext.Provider value={list}>
         <ListDispatchContext.Provider value={dispatch}>
           <Form />
