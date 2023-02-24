@@ -1,6 +1,7 @@
 import { Dispatch, useContext } from 'react';
 import { CounterContext, CounterDispatchContext } from '../../contexts/context';
 import { ActionType } from '../../types/ActionType';
+import styles from '../../styles/counter/counter.module.scss';
 
 /**
  * Counterコンポーネント
@@ -37,11 +38,11 @@ const Counter = (): JSX.Element => {
 
   return (
     <div>
-      <h2>Counterコンポーネント</h2>
+      <h2 className={styles.title}>Counterコンポーネント</h2>
 
       <div>
         <button onClick={handleCounterAdd}>+</button>
-        <span>{currentCount}</span>
+        <span className={styles.currentCount}>{currentCount}</span>
         <button onClick={handleCounterSub}>-</button>
       </div>
     </div>
