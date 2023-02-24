@@ -6,6 +6,7 @@ import ListIndex from './components/form/ListIndex';
 import CounterIndex from './components/counter/CounterIndex';
 import { UserInfoContext } from './contexts/context';
 import { UserInfoType } from './types/UserInfoType';
+import styles from './styles/app.module.scss';
 
 /**
  * Appコンポーネント
@@ -23,7 +24,7 @@ const App = (): JSX.Element => {
     <div>
       {/* ユーザー情報をどのコンポーネントでも利用できるよう、このコンポーネントでProviderに渡す */}
       <UserInfoContext.Provider value={userInfoInitialData}>
-        <h1>Context/Reducerのサンプル実装</h1>
+        <h1 className={styles.title}>Context/Reducerのサンプル実装</h1>
 
         <Routes>
           <Route path='/' element={<Navigation />}>
