@@ -2,6 +2,7 @@ import { Dispatch, useContext } from 'react';
 import { ActionType } from '../../types/ActionType';
 import { useForm } from 'react-hook-form';
 import { ListDispatchContext } from '../../contexts/context';
+import styles from '../../styles/form/form.module.scss';
 
 type FormInputDataType = {
   textInput: string;
@@ -37,12 +38,20 @@ const Form = (): JSX.Element => {
 
   return (
     <div>
-      <h2>Formコンポーネント</h2>
+      <h2 className={styles.title}>Formコンポーネント</h2>
 
       <form onSubmit={handleSubmit(handleSubmitText)}>
-        <label htmlFor='textInput'>タスク：</label>
-        <input id='textInput' {...register('textInput')} />
-        <button type='submit'>追加</button>
+        <label htmlFor='textInput' className={styles.formLabel}>
+          タスク：
+        </label>
+        <input
+          id='textInput'
+          className={styles.formInput}
+          {...register('textInput')}
+        />
+        <button type='submit' className={styles.submitBtn}>
+          追加
+        </button>
       </form>
     </div>
   );
