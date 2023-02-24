@@ -14,12 +14,14 @@ const ListIndex = (): JSX.Element => {
   const [list, dispatch] = useReducer(reducer, []);
 
   return (
-    <ListContext.Provider value={list}>
-      <ListDispatchContext.Provider value={dispatch}>
-        <Form />
-        <List />
-      </ListDispatchContext.Provider>
-    </ListContext.Provider>
+    <div>
+      <ListContext.Provider value={list}>
+        <ListDispatchContext.Provider value={dispatch}>
+          <Form />
+          <List />
+        </ListDispatchContext.Provider>
+      </ListContext.Provider>
+    </div>
   );
 };
 

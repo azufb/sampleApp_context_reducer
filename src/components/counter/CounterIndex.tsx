@@ -14,12 +14,14 @@ const CounterIndex = (): JSX.Element => {
   const [counter, dispatch] = useReducer(reducer, 0);
 
   return (
-    <CounterContext.Provider value={counter}>
-      <CounterDispatchContext.Provider value={dispatch}>
-        <Counter />
-        <CurrentCounter />
-      </CounterDispatchContext.Provider>
-    </CounterContext.Provider>
+    <div>
+      <CounterContext.Provider value={counter}>
+        <CounterDispatchContext.Provider value={dispatch}>
+          <Counter />
+          <CurrentCounter />
+        </CounterDispatchContext.Provider>
+      </CounterContext.Provider>
+    </div>
   );
 };
 
