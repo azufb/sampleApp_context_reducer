@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { CounterContext, UserInfoContext } from '../../contexts/context';
 import { UserInfoType } from '../../types/UserInfoType';
+import styles from '../../styles/counter/currentCounter.module.scss';
 
 /**
  * CurrentCounterコンポーネント
@@ -16,7 +17,7 @@ const CurrentCounter = (): JSX.Element => {
 
   return (
     <div>
-      <h2>CurrentCounterコンポーネント</h2>
+      <h2 className={styles.title}>CurrentCounterコンポーネント</h2>
 
       <p>ユーザー名：{userInfo.userName}</p>
       <p>現在のcountの状態は、{currentCount}です。</p>
