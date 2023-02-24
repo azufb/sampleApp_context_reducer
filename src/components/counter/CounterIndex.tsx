@@ -6,21 +6,21 @@ import CurrentCounter from './CurrentCounter';
 
 /**
  * CounterIndexコンポーネント
- * 
+ *
  * @returns {JSX.Element}
  */
 const CounterIndex = (): JSX.Element => {
-    // 初期値は0
-    const [counter, dispatch] = useReducer(reducer, 0);
-    
-    return (
-        <CounterContext.Provider value={counter}>
-            <CounterDispatchContext.Provider value={dispatch}>
-                <Counter />
-                <CurrentCounter />
-            </CounterDispatchContext.Provider>
-        </CounterContext.Provider>
-    );
+  // 初期値は0
+  const [counter, dispatch] = useReducer(reducer, 0);
+
+  return (
+    <CounterContext.Provider value={counter}>
+      <CounterDispatchContext.Provider value={dispatch}>
+        <Counter />
+        <CurrentCounter />
+      </CounterDispatchContext.Provider>
+    </CounterContext.Provider>
+  );
 };
 
 export default CounterIndex;

@@ -6,21 +6,21 @@ import List from './List';
 
 /**
  * ListIndexコンポーネント
- * 
+ *
  * @returns {JSX.Element}
  */
 const ListIndex = (): JSX.Element => {
-    // 初期値は空配列
-    const [list, dispatch] = useReducer(reducer, []);
+  // 初期値は空配列
+  const [list, dispatch] = useReducer(reducer, []);
 
-    return (
-        <ListContext.Provider value={list}>
-            <ListDispatchContext.Provider value={dispatch}>
-                <Form />
-                <List />
-            </ListDispatchContext.Provider>
-        </ListContext.Provider>
-    );
+  return (
+    <ListContext.Provider value={list}>
+      <ListDispatchContext.Provider value={dispatch}>
+        <Form />
+        <List />
+      </ListDispatchContext.Provider>
+    </ListContext.Provider>
+  );
 };
 
 export default ListIndex;

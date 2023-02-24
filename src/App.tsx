@@ -9,7 +9,7 @@ import { UserInfoType } from './types/UserInfoType';
 
 /**
  * Appコンポーネント
- * 
+ *
  * @returns {JSX.Element}
  */
 const App = (): JSX.Element => {
@@ -25,7 +25,6 @@ const App = (): JSX.Element => {
       <UserInfoContext.Provider value={userInfoInitialData}>
         <h1>Context/Reducerのサンプル実装</h1>
 
-        
         <Routes>
           <Route path='/' element={<Navigation />}>
             <Route index element={<Home />} />
@@ -36,6 +35,6 @@ const App = (): JSX.Element => {
       </UserInfoContext.Provider>
     </div>
   );
-}
+};
 
 export default App;
