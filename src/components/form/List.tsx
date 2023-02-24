@@ -7,6 +7,7 @@ import {
 import { ActionType } from '../../types/ActionType';
 import { ListType } from '../../types/ListType';
 import { UserInfoType } from '../../types/UserInfoType';
+import styles from '../../styles/form/list.module.scss';
 
 /**
  * Listコンポーネント
@@ -38,24 +39,24 @@ const List = (): JSX.Element => {
 
   return (
     <div>
-      <h2>Listコンポーネント</h2>
+      <h2 className={styles.title}>Listコンポーネント</h2>
 
       <p>ユーザー名：{userInfo.userName}</p>
 
-      <table>
-        <thead>
+      <table className={styles.listTable}>
+        <thead className={styles.thead}>
           <tr>
-            <th>id</th>
-            <th>タイトル</th>
-            <th></th>
+            <th className={`${styles.commonTh} ${styles.idTh}`}>id</th>
+            <th className={`${styles.commonTh} ${styles.titleTh}`}>タイトル</th>
+            <th className={`${styles.commonTh} ${styles.deleteBtnTh}`}></th>
           </tr>
         </thead>
         <tbody>
           {list.map((task) => (
-            <tr key={task.id}>
-              <td>{task.id}</td>
-              <td>{task.title}</td>
-              <td>
+            <tr key={task.id} className={styles.tbodyTr}>
+              <td className={`${styles.commonTd} ${styles.idTd}`}>{task.id}</td>
+              <td className={styles.commonTd}>{task.title}</td>
+              <td className={`${styles.commonTd} ${styles.deleteBtnTd}`}>
                 <button onClick={() => handleDeleteTask(task.id)}>削除</button>
               </td>
             </tr>

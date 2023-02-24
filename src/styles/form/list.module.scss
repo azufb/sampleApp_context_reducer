@@ -1,0 +1,48 @@
+.title {
+  text-decoration: underline blue;
+}
+
+.listTable {
+  width: 50%;
+  border-collapse: collapse;
+  border: 1px solid black;
+
+  .thead {
+    border-bottom: 1px solid black;
+  }
+
+  .commonTh,
+  .commonTd {
+    padding: 0.25rem 0.5rem;
+    border-right: 1px solid black;
+    &:nth-last-child(1) {
+      border-right: none;
+    }
+  }
+
+  .tbodyTr {
+    &:nth-child(2n) {
+      background-color: #e4e4e4;
+    }
+  }
+
+  .idTh {
+    width: 10%;
+  }
+
+  .titleTh {
+    width: 80%;
+  }
+
+  .deleteBtnTh {
+    width: 10%;
+  }
+
+  .idTd {
+    text-align: center;
+  }
+
+  .deleteBtnTd {
+    text-align: center;
+  }
+}
