@@ -4,10 +4,13 @@
 
 .link {
   text-decoration: none;
+  color: unset;
 }
 
-.link:visited {
-  color: unset;
+.activeLink {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .navigation {

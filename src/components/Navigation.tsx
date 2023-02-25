@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useMatch } from 'react-router-dom';
 import styles from '../styles/navigation.module.scss';
 
 const Navigation = () => {
@@ -6,17 +6,47 @@ const Navigation = () => {
     <div className={styles.navPosition}>
       <div className={styles.navigation}>
         <p>
-          <Link to='/' className={styles.link}>
+          <Link
+            to='/'
+            className={`${
+              useMatch({
+                path: '/',
+                end: true,
+              })
+                ? styles.activeLink
+                : styles.link
+            }`}
+          >
             Home
           </Link>
         </p>
         <p>
-          <Link to='/form' className={styles.link}>
+          <Link
+            to='/form'
+            className={`${
+              useMatch({
+                path: '/form',
+                end: true,
+              })
+                ? styles.activeLink
+                : styles.link
+            }`}
+          >
             フォームサンプル
           </Link>
         </p>
         <p>
-          <Link to='/counter' className={styles.link}>
+          <Link
+            to='/counter'
+            className={`${
+              useMatch({
+                path: '/counter',
+                end: true,
+              })
+                ? styles.activeLink
+                : styles.link
+            }`}
+          >
             カウンターサンプル
           </Link>
         </p>
