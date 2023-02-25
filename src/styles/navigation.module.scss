@@ -1,6 +1,6 @@
 @use './variables/CONST_COLORS.scss' as var;
 
-.navPosition {
+.wrapper {
   display: flex;
 }
 
@@ -9,8 +9,8 @@
   color: unset;
 }
 
-.activeLink {
-  color: var.$accent;
+.link_active {
+  color: var.$color-accent;
   font-weight: bold;
   text-decoration: none;
 }

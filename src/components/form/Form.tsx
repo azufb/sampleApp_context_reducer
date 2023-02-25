@@ -42,15 +42,15 @@ const Form = (): JSX.Element => {
       <h2 className={common.title}>Formコンポーネント</h2>
 
       <form onSubmit={handleSubmit(handleSubmitText)}>
-        <label htmlFor='textInput' className={styles.formLabel}>
+        <label htmlFor='textInput' className={styles.label}>
           タスク：
         </label>
         <input
           id='textInput'
-          className={styles.formInput}
+          className={styles.input}
           {...register('textInput')}
         />
-        <button type='submit' className={styles.submitBtn}>
+        <button type='submit' className={styles.btn_submit}>
           追加
         </button>
       </form>

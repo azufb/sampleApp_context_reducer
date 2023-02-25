@@ -1,46 +1,46 @@
 @use '../variables/CONST_COLORS.scss' as var;
 
-.listTable {
+.table {
   width: 50%;
   border-collapse: collapse;
-  border: 1px solid var.$kuro;
+  border: 1px solid var.$color-black;
 
   .thead {
-    border-bottom: 1px solid var.$kuro;
+    border-bottom: 1px solid var.$color-black;
   }
 
-  .commonTh,
-  .commonTd {
+  .th_common,
+  .td_common {
     padding: 0.25rem 0.5rem;
-    border-right: 1px solid var.$kuro;
+    border-right: 1px solid var.$color-black;
     &:nth-last-child(1) {
       border-right: none;
     }
   }
 
-  .tbodyTr {
+  .tr_tbody {
     &:nth-child(2n) {
-      background-color: var.$tableRowBg;
+      background-color: var.$bg-table-row;
     }
   }
 
-  .idTh {
+  .th_id {
     width: 10%;
   }
 
-  .titleTh {
+  .th_title {
     width: 80%;
   }
 
-  .deleteBtnTh {
+  .th_deleteBtn {
     width: 10%;
   }
 
-  .idTd {
+  .td_id {
     text-align: center;
   }
 
-  .deleteBtnTd {
+  .td_btn {
     text-align: center;
   }
 }

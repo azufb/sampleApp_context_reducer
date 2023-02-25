@@ -3,7 +3,7 @@ import styles from '../styles/navigation.module.scss';
 
 const Navigation = () => {
   return (
-    <div className={styles.navPosition}>
+    <div className={styles.wrapper}>
       <div className={styles.navigation}>
         <p>
           <Link
@@ -13,7 +13,7 @@ const Navigation = () => {
                 path: '/',
                 end: true,
               })
-                ? styles.activeLink
+                ? styles.link_active
                 : styles.link
             }`}
           >
@@ -28,7 +28,7 @@ const Navigation = () => {
                 path: '/form',
                 end: true,
               })
-                ? styles.activeLink
+                ? styles.link_active
                 : styles.link
             }`}
           >
@@ -43,7 +43,7 @@ const Navigation = () => {
                 path: '/counter',
                 end: true,
               })
-                ? styles.activeLink
+                ? styles.link_active
                 : styles.link
             }`}
           >

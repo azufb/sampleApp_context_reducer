@@ -43,7 +43,7 @@ const Counter = (): JSX.Element => {
 
       <div>
         <button onClick={handleCounterAdd}>+</button>
-        <span className={styles.currentCount}>{currentCount}</span>
+        <span className={styles.count}>{currentCount}</span>
         <button onClick={handleCounterSub}>-</button>
       </div>
     </div>

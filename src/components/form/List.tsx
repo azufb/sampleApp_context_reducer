@@ -44,20 +44,24 @@ const List = (): JSX.Element => {
 
       <p>ユーザー名：{userInfo.userName}</p>
 
-      <table className={styles.listTable}>
+      <table className={styles.table}>
         <thead className={styles.thead}>
           <tr>
-            <th className={`${styles.commonTh} ${styles.idTh}`}>id</th>
-            <th className={`${styles.commonTh} ${styles.titleTh}`}>タイトル</th>
-            <th className={`${styles.commonTh} ${styles.deleteBtnTh}`}></th>
+            <th className={`${styles.th_common} ${styles.th_id}`}>id</th>
+            <th className={`${styles.th_common} ${styles.th_title}`}>
+              タイトル
+            </th>
+            <th className={`${styles.th_common} ${styles.th_btn}`}></th>
           </tr>
         </thead>
         <tbody>
           {list.map((task) => (
-            <tr key={task.id} className={styles.tbodyTr}>
-              <td className={`${styles.commonTd} ${styles.idTd}`}>{task.id}</td>
-              <td className={styles.commonTd}>{task.title}</td>
-              <td className={`${styles.commonTd} ${styles.deleteBtnTd}`}>
+            <tr key={task.id} className={styles.tr_tbody}>
+              <td className={`${styles.td_common} ${styles.td_id}`}>
+                {task.id}
+              </td>
+              <td className={styles.td_common}>{task.title}</td>
+              <td className={`${styles.td_common} ${styles.td_btn}`}>
                 <button onClick={() => handleDeleteTask(task.id)}>削除</button>
               </td>
             </tr>

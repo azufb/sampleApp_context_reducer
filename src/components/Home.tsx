@@ -18,8 +18,8 @@ const Home = (): JSX.Element => {
 
       <h2 className={common.title}>Homeコンポーネント</h2>
 
-      <p className={styles.userName}>ユーザー名：{userInfo.userName}</p>
-      <p className={styles.userId}>ユーザーID：{userInfo.userId}</p>
+      <p className={styles.user_name}>ユーザー名：{userInfo.userName}</p>
+      <p className={styles.user_id}>ユーザーID：{userInfo.userId}</p>
       <p className={styles.annotation}>
         ※ユーザー名とユーザーIDは仮の情報です。
       </p>
