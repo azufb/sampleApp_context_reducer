@@ -1,20 +1,22 @@
+@use '../variables/CONST_COLORS.scss' as var;
+
 .title {
-  text-decoration: underline blue;
+  text-decoration: underline var.$accent;
 }
 
 .listTable {
   width: 50%;
   border-collapse: collapse;
-  border: 1px solid black;
+  border: 1px solid var.$kuro;
 
   .thead {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var.$kuro;
   }
 
   .commonTh,
   .commonTd {
     padding: 0.25rem 0.5rem;
-    border-right: 1px solid black;
+    border-right: 1px solid var.$kuro;
     &:nth-last-child(1) {
       border-right: none;
     }
@@ -22,7 +24,7 @@
 
   .tbodyTr {
     &:nth-child(2n) {
-      background-color: #e4e4e4;
+      background-color: var.$tableRowBg;
     }
   }
 

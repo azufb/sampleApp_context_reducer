@@ -1,3 +1,5 @@
+@use './variables/CONST_COLORS.scss' as var;
+
 .title {
-  text-decoration: underline blue;
+  text-decoration: underline var.$accent;
 }
