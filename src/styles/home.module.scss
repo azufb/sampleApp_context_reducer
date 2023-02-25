@@ -3,3 +3,9 @@
 .title {
   text-decoration: underline var.$accent;
 }
+
+.userName,
+.userId,
+.annotation {
+  margin: 0;
+}
