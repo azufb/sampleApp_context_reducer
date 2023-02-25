@@ -15,6 +15,8 @@ const CounterIndex = (): JSX.Element => {
 
   return (
     <div>
+      <h2>カウンターサンプル</h2>
+
       <CounterContext.Provider value={counter}>
         <CounterDispatchContext.Provider value={dispatch}>
           <Counter />

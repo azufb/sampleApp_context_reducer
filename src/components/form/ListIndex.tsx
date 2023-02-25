@@ -16,6 +16,8 @@ const ListIndex = (): JSX.Element => {
 
   return (
     <div className={styles.base}>
+      <h2>フォームサンプル</h2>
+
       <ListContext.Provider value={list}>
         <ListDispatchContext.Provider value={dispatch}>
           <Form />

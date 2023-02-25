@@ -13,6 +13,8 @@ const Home = (): JSX.Element => {
 
   return (
     <div>
+      <h2>Home</h2>
+
       <h2 className={styles.title}>Homeコンポーネント</h2>
 
       <p>ユーザー名：{userInfo.userName}</p>
