@@ -4,7 +4,7 @@ import styles from '../styles/navigation.module.scss';
 const Navigation = () => {
   return (
     <div className={styles.navPosition}>
-      <div>
+      <div className={styles.navigation}>
         <p>
           <Link to='/' className={styles.link}>
             Home
