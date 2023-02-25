@@ -7,6 +7,7 @@ import {
 import { ActionType } from '../../types/ActionType';
 import { ListType } from '../../types/ListType';
 import { UserInfoType } from '../../types/UserInfoType';
+import common from '../../styles/common/common.module.scss';
 import styles from '../../styles/form/list.module.scss';
 
 /**
@@ -39,7 +40,7 @@ const List = (): JSX.Element => {
 
   return (
     <div>
-      <h2 className={styles.title}>Listコンポーネント</h2>
+      <h2 className={common.title}>Listコンポーネント</h2>
 
       <p>ユーザー名：{userInfo.userName}</p>
 

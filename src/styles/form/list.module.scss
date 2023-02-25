@@ -1,9 +1,5 @@
 @use '../variables/CONST_COLORS.scss' as var;
 
-.title {
-  text-decoration: underline var.$accent;
-}
-
 .listTable {
   width: 50%;
   border-collapse: collapse;

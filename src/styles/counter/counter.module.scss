@@ -1,9 +1,3 @@
-@use '../variables/CONST_COLORS.scss' as var;
-
-.title {
-  text-decoration: underline var.$accent;
-}
-
 .currentCount {
   padding: 0 0.5rem;
 }

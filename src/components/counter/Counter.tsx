@@ -1,6 +1,7 @@
 import { Dispatch, useContext } from 'react';
 import { CounterContext, CounterDispatchContext } from '../../contexts/context';
 import { ActionType } from '../../types/ActionType';
+import common from '../../styles/common/common.module.scss';
 import styles from '../../styles/counter/counter.module.scss';
 
 /**
@@ -38,7 +39,7 @@ const Counter = (): JSX.Element => {
 
   return (
     <div>
-      <h2 className={styles.title}>Counterコンポーネント</h2>
+      <h2 className={common.title}>Counterコンポーネント</h2>
 
       <div>
         <button onClick={handleCounterAdd}>+</button>

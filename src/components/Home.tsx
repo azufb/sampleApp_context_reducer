@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { UserInfoContext } from '../contexts/context';
 import { UserInfoType } from '../types/UserInfoType';
+import common from '../styles/common/common.module.scss';
 import styles from '../styles/home.module.scss';
 
 /**
@@ -15,7 +16,7 @@ const Home = (): JSX.Element => {
     <div>
       <h2>Home</h2>
 
-      <h2 className={styles.title}>Homeコンポーネント</h2>
+      <h2 className={common.title}>Homeコンポーネント</h2>
 
       <p className={styles.userName}>ユーザー名：{userInfo.userName}</p>
       <p className={styles.userId}>ユーザーID：{userInfo.userId}</p>
