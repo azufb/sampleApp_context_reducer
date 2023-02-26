@@ -32,7 +32,7 @@ const Navigation = () => {
                 : styles.link
             }`}
           >
-            フォームサンプル
+            フォーム
           </Link>
         </p>
         <p>
@@ -47,7 +47,7 @@ const Navigation = () => {
                 : styles.link
             }`}
           >
-            カウンターサンプル
+            カウンター
           </Link>
         </p>
       </div>
