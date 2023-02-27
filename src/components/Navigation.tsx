@@ -1,5 +1,5 @@
-import { Link, Outlet, useMatch } from 'react-router-dom';
-import styles from '../styles/navigation.module.scss';
+import { Link, Outlet, useMatch } from "react-router-dom";
+import styles from "../styles/navigation.module.scss";
 
 const Navigation = () => {
   return (
@@ -7,10 +7,10 @@ const Navigation = () => {
       <div className={styles.navigation}>
         <p>
           <Link
-            to='/'
+            to="/"
             className={`${
               useMatch({
-                path: '/',
+                path: "/",
                 end: true,
               })
                 ? styles.link_active
@@ -22,10 +22,10 @@ const Navigation = () => {
         </p>
         <p>
           <Link
-            to='/form'
+            to="/form"
             className={`${
               useMatch({
-                path: '/form',
+                path: "/form",
                 end: true,
               })
                 ? styles.link_active
@@ -37,10 +37,10 @@ const Navigation = () => {
         </p>
         <p>
           <Link
-            to='/counter'
+            to="/counter"
             className={`${
               useMatch({
-                path: '/counter',
+                path: "/counter",
                 end: true,
               })
                 ? styles.link_active
